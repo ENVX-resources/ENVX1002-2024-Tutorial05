@@ -272,14 +272,18 @@ p-value. The <code>t.test</code> function requires the sample data and
 the population mean as arguments. By default the <code>t.test</code>
 function assumes that the population mean is 0, so we need to specify
 the population mean as 8.5. We are going to consider a two-tailed test,
-so we will use the <code>alternative = "two.sided"</code> argument.</p>
+so we will use the <code>alternative = "two.sided"</code> argument.
+Below is the code to calculate the t-statistic and p-value.</p>
+<p><code>t.test(koala_weights$Weight_kg, mu = 8.5, alternative = "two.sided")</code></p>
 <div id="section-exercises-1" class="section level3">
 <h3>Exercises</h3>
 <p>Try this yourself using the koala weights data.</p>
 <div class="tutorial-exercise" data-label="koala-t-test"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0" data-pipe="|&gt;">
-<pre class="text"><code>t.test(x, mu = 8.5, alternative = &quot;two.sided&quot;)</code></pre>
+<pre class="text"><code>koala_weights &lt;- data.frame(Weight_kg = c(8, 8.5, 7.8, 9, 8.2, 8.4, 7.5, 9.1, 8.3, 7.9))
+
+## Enter your code here</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
 <p>Remember: Statistical significance is a measure of the probability
@@ -395,21 +399,21 @@ session$onSessionEnded(function() {
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "q1", question = structure("What is the null hypothesis for the koala example?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_8f902c1", 
+"character")), answers = list(structure(list(id = "lnr_ans_216e2aa", 
     option = "$H_0: \\mu = 8.5$", value = "$H_0: \\mu = 8.5$", 
     label = structure("\\(H_0: \\mu = 8.5\\)", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8cbe534", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9255941", 
     option = "$H_1: \\mu \\ne 8.5$", value = "$H_1: \\mu \\ne 8.5$", 
     label = structure("\\(H_1: \\mu \\ne 8.5\\)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is the alternate hypothesis.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8c27c11", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_cbf4e8", 
     option = "$H_1: \\mu < 8.5$", value = "$H_1: \\mu < 8.5$", 
     label = structure("\\(H_1: \\mu &lt; 8.5\\)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is the alternate hypothsis for a one tailed one sample t-test.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d157a84", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5379839", 
     option = "$H_1: \\mu > 8.5$", value = "$H_1: \\mu > 8.5$", 
     label = structure("\\(H_1: \\mu &gt; 8.5\\)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is the alternate hypothsis for a one tailed one one sample t-test.", html = TRUE, class = c("html", 
@@ -421,27 +425,27 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "q1-answer", question = "q1"), loading = NULL, random_answer_order = TRUE, 
-    allow_retry = FALSE, seed = 497482302.268342, options = list()), class = c("learnr_radio", 
+    allow_retry = FALSE, seed = 533006568.251799, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "q2", question = structure("What is the alternate hypothesis for the koala example considering we are interested in whether or not our sample of koalas is either lighter or heavier than 8.5kg?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_3be50ec", 
+"character")), answers = list(structure(list(id = "lnr_ans_7192774", 
     option = "$H_0: \\mu = 8.5$", value = "$H_0: \\mu = 8.5$", 
     label = structure("\\(H_0: \\mu = 8.5\\)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is the null hypothesis.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_54eb14", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b1f2231", 
     option = "$H_1: \\mu \\ne 8.5$", value = "$H_1: \\mu \\ne 8.5$", 
     label = structure("\\(H_1: \\mu \\ne 8.5\\)", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_945da88", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_65a9d05", 
     option = "$H_1: \\mu < 8.5$", value = "$H_1: \\mu < 8.5$", 
     label = structure("\\(H_1: \\mu &lt; 8.5\\)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is the alternate hypothsis for a one tailed one sample t-test.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9c470a4", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_742637c", 
     option = "$H_1: \\mu > 8.5$", value = "$H_1: \\mu > 8.5$", 
     label = structure("\\(H_1: \\mu &gt; 8.5\\)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is the alternate hypothsis for a one tailed one one sample t-test.", html = TRUE, class = c("html", 
@@ -453,7 +457,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "q2-answer", question = "q2"), loading = NULL, random_answer_order = TRUE, 
-    allow_retry = FALSE, seed = 852834957.602868, options = list()), class = c("learnr_radio", 
+    allow_retry = FALSE, seed = 1399134877.84848, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
@@ -625,24 +629,24 @@ learnr:::store_exercise_cache(structure(list(label = "qqplot", global_setup = st
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "q3", question = structure("Which statement is most correct?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_9759e17", 
+"character")), answers = list(structure(list(id = "lnr_ans_bab7ec5", 
     option = "1. Our Shapiro-Wilks test p > 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line so we can assume that our sample is normally distributed", 
     value = "1. Our Shapiro-Wilks test p > 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line so we can assume that our sample is normally distributed", 
     label = structure("<ol>\n<li>Our Shapiro-Wilks test p &gt; 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line so we can assume that our sample is normally distributed<\u002fli>\n<\u002fol>\n", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b361c35", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_c25927e", 
     option = "1. Our Shapiro-Wilks test p > 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line. We can assume that our sample is NOT normally distributed", 
     value = "1. Our Shapiro-Wilks test p > 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line. We can assume that our sample is NOT normally distributed", 
     label = structure("<ol>\n<li>Our Shapiro-Wilks test p &gt; 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line. We can assume that our sample is NOT normally distributed<\u002fli>\n<\u002fol>\n", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is incorrect, both lines of evidence suggest that the sample is normally distributed.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_53287", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5805886", 
     option = "1. Our Shapiro-Wilks test p < 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line. We can assume that our sample is normally distributed", 
     value = "1. Our Shapiro-Wilks test p < 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line. We can assume that our sample is normally distributed", 
     label = structure("<ol>\n<li>Our Shapiro-Wilks test p &lt; 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points lie approximately along the line. We can assume that our sample is normally distributed<\u002fli>\n<\u002fol>\n", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is incorrect as the p-value is greater than 0.05, so we fail to reject the null hypothesis.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d0c34f2", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_759322f", 
     option = "1. Our Shapiro-Wilks test p > 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points do NOT lie approximately along the line. We can assume that our sample is NOT normally distributed", 
     value = "1. Our Shapiro-Wilks test p > 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points do NOT lie approximately along the line. We can assume that our sample is NOT normally distributed", 
     label = structure("<ol>\n<li>Our Shapiro-Wilks test p &gt; 0.05, so we fail to reject the null hypothesis and 2. Our qq normal plot shows that our the points do NOT lie approximately along the line. We can assume that our sample is NOT normally distributed<\u002fli>\n<\u002fol>\n", html = TRUE, class = c("html", 
@@ -655,7 +659,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "q3-answer", question = "q3"), loading = NULL, random_answer_order = TRUE, 
-    allow_retry = FALSE, seed = 1619499187.74586, options = list()), class = c("learnr_radio", 
+    allow_retry = FALSE, seed = 1857760093.13491, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
@@ -671,7 +675,7 @@ output$`tutorial-exercise-koala-t-test-output` <- renderUI({
 learnr:::store_exercise_cache(structure(list(label = "koala-t-test", global_setup = structure(c("library(learnr)", 
 "knitr::opts_chunk$set(echo = TRUE)"), chunk_opts = list(label = "setup", 
     eval = TRUE, include = FALSE)), setup = NULL, chunks = list(
-    list(label = "koala-t-test", code = "t.test(x, mu = 8.5, alternative = \"two.sided\")", 
+    list(label = "koala-t-test", code = "koala_weights <- data.frame(Weight_kg = c(8, 8.5, 7.8, 9, 8.2, 8.4, 7.5, 9.1, 8.3, 7.9))\n\n## Enter your code here\n", 
         opts = list(label = "\"koala-t-test\"", exercise = "TRUE"), 
         engine = "r")), code_check = NULL, error_check = NULL, 
     check = NULL, solution = NULL, tests = NULL, options = list(
@@ -691,8 +695,9 @@ learnr:::store_exercise_cache(structure(list(label = "koala-t-test", global_setu
         message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
         engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
         max.print = 1000, label = "koala-t-test", exercise = TRUE, 
-        code = "t.test(x, mu = 8.5, alternative = \"two.sided\")", 
-        out.width.px = 624, out.height.px = 384, params.src = "koala-t-test, exercise=TRUE", 
+        code = c("koala_weights <- data.frame(Weight_kg = c(8, 8.5, 7.8, 9, 8.2, 8.4, 7.5, 9.1, 8.3, 7.9))", 
+        "", "## Enter your code here", ""), out.width.px = 624, 
+        out.height.px = 384, params.src = "koala-t-test, exercise=TRUE", 
         fig.num = 0, exercise.df_print = "paged", exercise.checker = "NULL"), 
     engine = "r", version = "4"), class = c("r", "tutorial_exercise"
 )))
@@ -700,24 +705,24 @@ learnr:::store_exercise_cache(structure(list(label = "koala-t-test", global_setu
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "q4", question = structure("Which statement is most correct?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_79c1686", 
+"character")), answers = list(structure(list(id = "lnr_ans_73c0e2a", 
     option = "Our t-test shows p > 0.05, so we fail to reject the null hypothesis so there is no strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", 
     value = "Our t-test shows p > 0.05, so we fail to reject the null hypothesis so there is no strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", 
     label = structure("Our t-test shows p &gt; 0.05, so we fail to reject the null hypothesis so there is no strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_720c76b", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9a0a9ca", 
     option = "Our t-test shows p < 0.05, so we fail to reject the null hypothesis so there is no strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", 
     value = "Our t-test shows p < 0.05, so we fail to reject the null hypothesis so there is no strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", 
     label = structure("Our t-test shows p &lt; 0.05, so we fail to reject the null hypothesis so there is no strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is incorrect as our p-value is greater than 0.05.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_66afba1", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5ba2b13", 
     option = "Our t-test shows p > 0.05, so we reject the null hypothesis so there is strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", 
     value = "Our t-test shows p > 0.05, so we reject the null hypothesis so there is strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", 
     label = structure("Our t-test shows p &gt; 0.05, so we reject the null hypothesis so there is strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("This is incorrect the p-value is indeed greater than 0.05, so we fail to reject the null hypothesis and state that there is NO strong evidence that our sample weight is different from the hypothesised mean.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ca85a69", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_fd233bb", 
     option = "Our t-test shows p < 0.05, so we reject the null hypothesis so there is strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", 
     value = "Our t-test shows p < 0.05, so we reject the null hypothesis so there is strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", 
     label = structure("Our t-test shows p &lt; 0.05, so we reject the null hypothesis so there is strong evidence to suggest the mean of our sample weights is different from the hypothesised mean", html = TRUE, class = c("html", 
@@ -730,7 +735,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "q4-answer", question = "q4"), loading = NULL, random_answer_order = TRUE, 
-    allow_retry = FALSE, seed = 809162018.123205, options = list()), class = c("learnr_radio", 
+    allow_retry = FALSE, seed = 2145293849.00102, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 

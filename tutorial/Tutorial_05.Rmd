@@ -154,14 +154,19 @@ question("Which statement is most correct?",
 
 ## One Sample T-Test
 
-Now that we have tested the assumptions, we can proceed to calculate the t-statistic (**T**) and p-value (**P**). Luckily, R has a built-in function to do this in one step for us. We can use the `t.test` function to calculate the t-statistic and p-value. The `t.test` function requires the sample data and the population mean as arguments. By default the `t.test` function assumes that the population mean is 0, so we need to specify the population mean as 8.5. We are going to consider a two-tailed test, so we will use the `alternative = "two.sided"` argument.
+Now that we have tested the assumptions, we can proceed to calculate the t-statistic (**T**) and p-value (**P**). Luckily, R has a built-in function to do this in one step for us. We can use the `t.test` function to calculate the t-statistic and p-value. The `t.test` function requires the sample data and the population mean as arguments. By default the `t.test` function assumes that the population mean is 0, so we need to specify the population mean as 8.5. We are going to consider a two-tailed test, so we will use the `alternative = "two.sided"` argument. Below is the code to calculate the t-statistic and p-value.
+
+`t.test(koala_weights$Weight_kg, mu = 8.5, alternative = "two.sided")`
 
 ### Exercises
 
 Try this yourself using the koala weights data.
 
 ```{r koala-t-test, exercise=TRUE}
-t.test(x, mu = 8.5, alternative = "two.sided")
+koala_weights <- data.frame(Weight_kg = c(8, 8.5, 7.8, 9, 8.2, 8.4, 7.5, 9.1, 8.3, 7.9))
+
+## Enter your code here
+
 ```
 
 Remember: Statistical significance is a measure of the probability that an observed difference could have occurred by random chance. The p-value is the probability of observing a test statistic as extreme as the one calculated from the sample data, assuming the null hypothesis is true. If the p-value is less than the significance level (usually 0.05), then we reject the null hypothesis and conclude that the sample data provides enough evidence to support the alternative hypothesis. What is the case in your above example?
